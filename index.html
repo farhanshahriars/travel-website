@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Escapes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo"><img src="images/logo.png" alt="Epic Escapes Travel Logo" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="destinations.html" class="dropdown-toggle">
+                        Destinations <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">
+                            <h4>Featured Destinations</h4>
+                            <p>Explore our most popular journeys</p>
+                        </div>
+                        <div class="dropdown-grid">
+                            <a href="https://www.youtube.com/watch?v=hKr-0Ep-7M4" class="dropdown-item">
+                                <div class="dropdown-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div>
+                                    <h5>China Adventures</h5>
+                                    <p>Great Wall Hiking & Cultural Tours</p>
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=rcnLTnGGBU0" class="dropdown-item">
+                                <div class="dropdown-icon">
+                                    <i class="fas fa-torii-gate"></i>
+                                </div>
+                                <div>
+                                    <h5>Japan Experiences</h5>
+                                    <p>Cultural & Seasonal Journeys</p>
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=vbm90ThCNDQ" class="dropdown-item">
+                                <div class="dropdown-icon">
+                                    <i class="fas fa-umbrella-beach"></i>
+                                </div>
+                                <div>
+                                    <h5>Malaysia Explorations</h5>
+                                    <p>Tropical Adventures & Temple Tours</p>
+                                </div>
+                            </a>
+                            <a href="destinations.html" class="dropdown-item view-all">
+                                <div class="dropdown-icon">
+                                    <i class="fas fa-globe-asia"></i>
+                                </div>
+                                <div>
+                                    <h5>View All Destinations</h5>
+                                    <p>Browse all available tours</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="#book" class="btn book-now">Book Now</a>
+        </nav>
+    </header>
+
+    
+    <section class="hero" id="home">
+        <div class="slider">
+            
+            <div class="slide active">
+                <div class="slide-content">
+                    <h1>Magical China: <span>From Great Wall to Lanterns</span></h1>
+                    <p>Step into China: epic walls, sizzling streets, timeless tales.</p>
+                    <a href="destinations.html" class="btn explore-btn">Explore Tours</a>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Timeless Japan: <span>Land of Sushi, Shrines & Surprises</span></h1>
+                    <p>Discover Japan: neon nights, cherry blossoms, perennial traditions.</p>
+                    <a href="destinations.html" class="btn explore-btn">Explore Tours</a>
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Majestic Malaysia: <span>Treasure of Traditions & Tropics</span></h1>
+                    <p>Experience Malaysia: tropical islands, bustling markets, serene highlands.</p>
+                    <a href="destinations.html" class="btn explore-btn">Explore Tours</a>
+                </div>
+            </div>
+            
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="dots-container">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="destinations" id="destinations">
+        <div class="section-heading">
+            <h2>Featured Destinations</h2>
+            <p>Curated journeys to the world's most incredible places</p>
+        </div>
+        <div class="destinations-container">
+            
+            <div class="destination-card">
+                <div class="card-image">
+                    <img src="images/destinations/great-wall.jpg" alt="Great Wall">
+                    <span class="price-tag">$1,870</span>
+                </div>
+                <div class="card-content">
+                    <div class="rating">⭐⭐⭐⭐⭐ (24)</div>
+                    <h3>Great Wall Hiking Expedition</h3>
+                    <p><i class="far fa-clock"></i> 4 Days | <i class="fas fa-plane"></i> Beijing, China</p>
+                    <p>Hike iconic sections, watch sunrise over ancient watchtowers, and discover 2,000 years of history on this unforgettable adventure.</p>
+                    <a href="#" class="btn card-btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="destination-card">
+                <div class="card-image">
+                    <img src="images/destinations/chureito-pagoda.jpg" alt="Chureito Pagoda">
+                    <span class="price-tag">$2,450</span>
+                </div>
+                <div class="card-content">
+                    <div class="rating">⭐⭐⭐⭐⭐ (31)</div>
+                    <h3>Chureito Pagoda Seasonal Journey</h3>
+                    <p><i class="far fa-clock"></i> 1 Day | <i class="fas fa-plane"></i> Fujiyoshida, Japan</p>
+                    <p>Experience Japan's most photographed view while learning about Shinto traditions, with visits timed for cherry blossoms, autumn foliage, or clear winter vistas.</p>
+                    <a href="#" class="btn card-btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="destination-card">
+                <div class="card-image">
+                    <img src="images/destinations/batu-caves.jpg" alt="Batu Caves">
+                    <span class="price-tag">$1,950</span>
+                </div>
+                <div class="card-content">
+                    <div class="rating">⭐⭐⭐⭐⭐ (28)</div>
+                    <h3>Batu Caves Cave Exploration</h3>
+                    <p><i class="far fa-clock"></i> Half Day | <i class="fas fa-plane"></i> Kuala Lumpur, Malaysia</p>
+                    <p>Climb the 272 vibrant steps to limestone cave temples, witness the towering golden Murugan statue, and explore Hindu shrines nestled within ancient caverns</p>
+                    <a href="#" class="btn card-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="services" id="services">
+        <div class="section-heading">
+            <h2>Our Services</h2>
+            <p>Everything you need for a perfect journey</p>
+        </div>
+        <div class="services-container">
+            <div class="service-box">
+                <i class="fas fa-plane-departure"></i>
+                <h3>Flight Booking</h3>
+                <p>Best deals on domestic and international flights with flexible dates.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-hotel"></i>
+                <h3>Hotel Stays</h3>
+                <p>Luxury to budget accommodations curated for comfort and location.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Tour Packages</h3>
+                <p>Customizable itineraries with guides, transport, and activities included.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                                <p>Round-the-clock assistance during your travel for peace of mind.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="images/logo.png" alt="Epic Escapes Travel Logo" class="logo-img">
+                <p>Inspiring travel and creating unforgettable experiences around the globe since 2010.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Johnson Street, Toronto, Canada</p>
+                <p><i class="fas fa-phone"></i> +1 (800) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@epicescapes.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Epic Escapes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

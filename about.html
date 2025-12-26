@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Epic Escapes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('images/about/about-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 5% 100px;
+            margin-top: 80px;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .about-hero-content p {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        
+        .our-story {
+            padding: 100px 5%;
+            background: #fff;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .story-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: #222;
+        }
+
+        .story-text p {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #0077c0;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: #666;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .story-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .story-image:hover img {
+            transform: scale(1.03);
+        }
+
+        
+        .mission-vision {
+            padding: 100px 5%;
+            background: #f8f9fa;
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+        }
+
+        .mv-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .mv-card.mission {
+            border-top: 5px solid #0077c0;
+        }
+
+        .mv-card.vision {
+            border-top: 5px solid #00a1e6;
+        }
+
+        .mv-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+        }
+
+        .mv-card.mission .mv-icon {
+            color: #0077c0;
+        }
+
+        .mv-card.vision .mv-icon {
+            color: #00a1e6;
+        }
+
+        .mv-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .mv-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        
+        .team {
+            padding: 100px 5%;
+            background: #fff;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        
+        .team-member {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .team-member:hover {
+            transform: translateY(-15px);
+        }
+
+        
+        .team-member:nth-child(1) {
+            border-top: 5px solid #de2910;
+            border-bottom: 3px solid #ffde00;
+            background: linear-gradient(to bottom, #fff5f5, #ffffff);
+        }
+
+        .team-member:nth-child(1):hover {
+            box-shadow: 0 25px 50px rgba(222, 41, 16, 0.15);
+        }
+
+        
+        .team-member:nth-child(2) {
+            border-top: 5px solid #bc002d;
+            border-bottom: 3px solid #ffffff;
+            background: linear-gradient(to bottom, #fafafa, #ffffff);
+        }
+
+        .team-member:nth-child(2):hover {
+            box-shadow: 0 25px 50px rgba(188, 0, 45, 0.1);
+        }
+
+        
+        .team-member:nth-child(3) {
+            border-top: 5px solid #06006d;
+            border-bottom: 3px solid #fc0;
+            background: linear-gradient(to bottom, #f8f8ff, #ffffff);
+        }
+
+        .team-member:nth-child(3):hover {
+            box-shadow: 0 25px 50px rgba(6, 0, 109, 0.15);
+        }
+
+        
+        .member-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 25px;
+            transition: all 0.4s ease;
+        }
+
+        
+        .team-member:nth-child(1) .member-image {
+            border: 5px solid #de2910;
+            box-shadow: 0 10px 25px rgba(222, 41, 16, 0.25);
+        }
+
+        .team-member:nth-child(2) .member-image {
+            border: 5px solid #bc002d;
+            box-shadow: 0 10px 25px rgba(188, 0, 45, 0.2);
+        }
+
+        .team-member:nth-child(3) .member-image {
+            border: 5px solid #06006d;
+            box-shadow: 0 10px 25px rgba(6, 0, 109, 0.25);
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-member:hover .member-image img {
+            transform: scale(1.05);
+        }
+
+        
+        .team-member:nth-child(1) h3 {
+            color: #de2910;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member:nth-child(2) h3 {
+            color: #222;
+            background: linear-gradient(to right, #bc002d, #ff4d6d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .team-member:nth-child(3) h3 {
+            color: #06006d;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        
+        .position {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:nth-child(1) .position {
+            background: linear-gradient(135deg, #ffde00, #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            padding: 5px 0;
+        }
+
+        .team-member:nth-child(2) .position {
+            color: #bc002d;
+            font-weight: 700;
+            background: white;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 2px solid #bc002d;
+        }
+
+        .team-member:nth-child(3) .position {
+            background: linear-gradient(to right, #cc0001, #ff4d4d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            padding: 5px 0;
+        }
+
+        .team-member > p {
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        
+        .destination-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 20px 0 25px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .destination-badge:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .destination-badge i {
+            font-size: 1.2rem;
+        }
+
+        
+        .team-member:nth-child(1) .destination-badge {
+            background: linear-gradient(135deg, #de2910, #ff5a3c);
+            color: #ffde00;
+            border: 2px solid rgba(255, 222, 0, 0.5);
+            box-shadow: 0 4px 15px rgba(222, 41, 16, 0.25);
+        }
+
+        
+        .team-member:nth-child(2) .destination-badge {
+            background: white;
+            color: #bc002d;
+            border: 2px solid #bc002d;
+            box-shadow: 0 4px 15px rgba(188, 0, 45, 0.15);
+        }
+
+        
+        .team-member:nth-child(3) .destination-badge {
+            background: linear-gradient(135deg, #06006d, #21468b);
+            color: #fc0;
+            border: 2px solid rgba(252, 204, 0, 0.5);
+            box-shadow: 0 4px 15px rgba(6, 0, 109, 0.25);
+        }
+
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .member-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .member-social a:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        
+        .team-member:nth-child(1) .member-social a {
+            background: linear-gradient(135deg, #ffde00, #ffb347);
+            color: #de2910;
+            border: 2px solid #de2910;
+        }
+
+        .team-member:nth-child(1) .member-social a:hover {
+            background: linear-gradient(135deg, #de2910, #ff5a3c);
+            color: #ffde00;
+        }
+
+        
+        .team-member:nth-child(2) .member-social a {
+            background: white;
+            color: #bc002d;
+            border: 2px solid #bc002d;
+        }
+
+        .team-member:nth-child(2) .member-social a:hover {
+            background: #bc002d;
+            color: white;
+        }
+
+        
+        .team-member:nth-child(3) .member-social a {
+            background: linear-gradient(135deg, #fc0, #ffdb4d);
+            color: #06006d;
+            border: 2px solid #06006d;
+        }
+
+        .team-member:nth-child(3) .member-social a:hover {
+            background: linear-gradient(135deg, #06006d, #21468b);
+            color: #fc0;
+        }
+
+        
+        .fa-video:before {
+            content: "𝕋";
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        
+        .values {
+            padding: 100px 5%;
+            background: #f0f8ff;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: #0077c0;
+            margin-bottom: 25px;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .value-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        
+        .cta-about {
+            padding: 100px 5%;
+            background: linear-gradient(135deg, #0077c0, #00a1e6);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cta-content p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .cta-btn-primary {
+            background: white;
+            color: #0077c0;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+        }
+
+        .cta-btn-primary:hover {
+            background: #f0f0f0;
+        }
+
+        .cta-btn-secondary:hover {
+            background: white;
+            color: #0077c0;
+        }
+
+        
+        @media (max-width: 992px) {
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .story-image {
+                order: -1;
+            }
+            
+            .mv-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-btn-primary,
+            .cta-btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 140px 5% 80px;
+                min-height: 50vh;
+            }
+            
+            .about-hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .story-text h2 {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 25px;
+            }
+            
+            .mv-card {
+                padding: 40px 25px;
+            }
+            
+            .team {
+                padding: 80px 5%;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 40px auto 0;
+            }
+            
+            .team-member {
+                padding: 35px 25px;
+            }
+            
+            .member-image {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .team-member h3 {
+                font-size: 1.6rem;
+            }
+            
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cta-content h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .team-member {
+                padding: 30px 20px;
+            }
+            
+            .destination-badge {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .member-social a {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="Epic Escapes Travel Logo" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="destinations.html" class="dropdown-toggle">
+                        Destinations <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-header">
+                            <h4>Featured Destinations</h4>
+                            <p>Explore our most popular journeys</p>
+                            </div>
+                        <div class="dropdown-grid">
+                            <a href="https://www.youtube.com/watch?v=hKr-0Ep-7M4" class="dropdown-item">
+                                <div class="dropdown-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div>
+                                    <h5>China Adventures</h5>
+                                    <p>Great Wall Hiking & Cultural Tours</p>
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=rcnLTnGGBU0" class="dropdown-item">
+                                <div class="dropdown-icon">
+                                    <i class="fas fa-torii-gate"></i>
+                                </div>
+                                <div>
+                                    <h5>Japan Experiences</h5>
+                                    <p>Cultural & Seasonal Journeys</p>
+                                </div>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=vbm90ThCNDQ" class="dropdown-item">
+                                <div class="dropdown-icon">
+                                    <i class="fas fa-umbrella-beach"></i>
+                                </div>
+                                <div>
+                                    <h5>Malaysia Explorations</h5>
+                                    <p>Tropical Adventures & Temple Tours</p>
+                                </div>
+                            </a>
+                            <a href="destinations.html" class="dropdown-item view-all">
+                                <div class="dropdown-icon">
+                                    <i class="fas fa-globe-asia"></i>
+                                </div>
+                                <div>
+                                    <h5>View All Destinations</h5>
+                                    <p>Browse all available tours</p>
+                                </div>
+                            </a>
+                            </div>
+                    </div>
+                </li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="#book" class="btn book-now">Book Now</a>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>Our Story</h1>
+            <p>Creating unforgettable travel experiences since 2010</p>
+        </div>
+    </section>
+
+    <section class="our-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>From Passion to Profession</h2>
+                    <p>Epic Escapes began as a simple dream between three friends who shared an insatiable wanderlust. What started as travel blog documenting our adventures across Asia has blossomed into a premier travel consultancy serving thousands of travelers worldwide.</p>
+                    <p>For over a decade, we've been turning travel dreams into reality, combining local expertise with global standards to create journeys that go beyond typical tourism.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>5,000+</h3>
+                            <p>Happy Travelers</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Countries Covered</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>98%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="images/about/team.jpg" alt="Epic Escapes Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mv-grid">
+                <div class="mv-card mission">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To inspire and enable transformative travel experiences that connect people with cultures, landscapes, and themselves through meticulously planned journeys that prioritize authenticity, sustainability, and personal growth.</p>
+                </div>
+                <div class="mv-card vision">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To become the world's most trusted travel curator, recognized for creating journeys that don't just show places but transform perspectives, fostering global understanding through meaningful travel experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Meet Our Destination Experts</h2>
+                <p>Local specialists who craft authentic experiences in our featured regions</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/about/dong-liwei.jpg" alt="Dong Liwei">
+                    </div>
+                    <h3>Dong Liwei</h3>
+                    <p class="position">China Expedition Leader</p>
+                    <p>Beijing native with family roots in the Ming Dynasty guard stations. Speaks perfect English and knows every restored and wild section of the Great Wall. His sunrise photography tours are legendary.</p>
+                    <div class="destination-badge">
+                        <i class="fas fa-map-pin"></i> Expert: China
+                    </div>
+                    <div class="member-social">
+                        <a href="https://web.wechat.com/" title="WeChat"><i class="fab fa-weixin"></i></a>
+                        <a href="https://weibo.com/newlogin?tabtype=weibo&gid=102803&openLoginLayer=0&url=https%3A%2F%2Fweibo.com%2F" title="Weibo"><i class="fab fa-weibo"></i></a>
+                        <a href="https://www.douyin.com/" title="Douyin"><i class="fas fa-video"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/about/fumitaka-hatakubo.jpg" alt="Fumitaka Hatakubo">
+                    </div>
+                    <h3>Fumitaka Hatakubo</h3>
+                    <p class="position">Japan Cultural Ambassador</p>
+                    <p>Fourth-generation resident of Fujiyoshida with degrees in Shinto studies and traditional photography. Knows the exact best days for cherry blossoms and autumn colors at Chureito Pagoda.</p>
+                    <div class="destination-badge">
+                        <i class="fas fa-map-pin"></i> Expert: Japan
+                    </div>
+                    <div class="member-social">
+                        <a href="https://www.line.me/en/" title="Line"><i class="fab fa-line"></i></a>
+                        <a href="https://x.com/" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/about/ahmad-zikri.jpg" alt="Ahmad Zikri bin Abdullah">
+                    </div>
+                    <h3>Ahmad Zikri bin Abdullah</h3>
+                    <p class="position">Malaysia Heritage Guide</p>
+                    <p>Kuala Lumpur native with a Master's in Southeast Asian Cultural Studies. Has led Batu Caves tours since age 16 and maintains relationships with local Hindu temple caretakers for exclusive access.</p>
+                    <div class="destination-badge">
+                        <i class="fas fa-map-pin"></i> Expert: Malaysia
+                    </div>
+                    <div class="member-social">
+                        <a href="https://www.whatsapp.com/" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Our Values</h2>
+                <p>The principles that guide every journey we create</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Authenticity</h3>
+                    <p>We prioritize genuine local experiences over tourist traps, connecting you with real culture.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Responsible tourism that benefits local communities and minimizes environmental impact.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>From planning to execution, we maintain the highest standards in every detail.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Personalization</h3>
+                    <p>No two journeys are alike; we tailor every experience to your unique interests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-about">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Write Your Travel Story?</h2>
+                <p>Let's create an unforgettable journey together</p>
+                <div class="cta-buttons">
+                    <a href="destinations.html" class="btn cta-btn-primary">Explore Destinations</a>
+                    <a href="contact.html" class="btn cta-btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="images/logo.png" alt="Epic Escapes Travel Logo" class="logo-img">
+                <p>Inspiring travel and creating unforgettable experiences around the globe since 2010.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Johnson Street, Toronto, Canada</p>
+                    <p><i class="fas fa-phone"></i> +1 (800) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@epicescapes.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Epic Escapes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const currentYearElement = document.getElementById('currentYear');
+            if(currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+            }
+
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            
+            const header = document.querySelector('.header');
+            if(header) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 100) {
+                        header.style.padding = '15px 5%';
+                        header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                        header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+                    } else {
+                        header.style.padding = '20px 5%';
+                        header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
