@@ -1,6 +1,6 @@
-/* Services Page Specific Styles */
 
-/* Services Hero Section */
+
+
 .services-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url('images/services/services-hero.jpg');
@@ -29,7 +29,7 @@
     margin: 0 auto;
 }
 
-/* Detailed Services Section */
+
 .services-detailed {
     padding: 100px 5%;
     background: #fff;
@@ -97,7 +97,7 @@
     left: 0;
 }
 
-/* Process Section */
+
 .process {
     padding: 100px 5%;
     background: #f0f8ff;
@@ -141,7 +141,7 @@
     color: #666;
 }
 
-/* CTA Section */
+
 .cta-section {
     padding: 100px 5%;
     background: linear-gradient(135deg, #0077c0, #00a1e6);
@@ -176,7 +176,7 @@
     transform: translateY(-3px);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .services-hero {
         padding: 120px 5% 80px;
