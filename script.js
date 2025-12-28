@@ -96,15 +96,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ==================== DROPDOWN FUNCTIONALITY ====================
+    
     const dropdowns = document.querySelectorAll('.dropdown');
     
-    // For desktop - hover
+    
     dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector('.dropdown-toggle');
         const menu = dropdown.querySelector('.dropdown-menu');
         
-        // Desktop hover
+        
         dropdown.addEventListener('mouseenter', () => {
             if (window.innerWidth > 768) {
                 dropdown.classList.add('active');
@@ -117,26 +117,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Mobile touch/click
+        
         toggle.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
                 e.preventDefault();
                 e.stopPropagation();
                 
-                // Close other dropdowns
+                
                 dropdowns.forEach(other => {
                     if (other !== dropdown) {
                         other.classList.remove('active');
                     }
                 });
                 
-                // Toggle current dropdown
+                
                 dropdown.classList.toggle('active');
             }
         });
     });
     
-    // Close dropdowns when clicking elsewhere
+    
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.dropdown')) {
             dropdowns.forEach(dropdown => {
@@ -145,14 +145,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // ==================== MOBILE HAMBURGER MENU ====================
-    // Create hamburger menu for mobile
+    
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelector('.nav-links');
     
-    // Check if we need a hamburger (on mobile)
+    
     if (window.innerWidth <= 768) {
-        // Create hamburger button
+        
         const hamburger = document.createElement('div');
         hamburger.className = 'hamburger';
         hamburger.innerHTML = `
@@ -161,15 +160,15 @@ document.addEventListener('DOMContentLoaded', function() {
             <span></span>
         `;
         
-        // Insert hamburger before the nav links
+        
         navbar.insertBefore(hamburger, navLinks);
         
-        // Toggle mobile menu
+        
         hamburger.addEventListener('click', function() {
             this.classList.toggle('active');
             navLinks.classList.toggle('active');
             
-            // Close dropdowns when closing menu
+            
             if (!navLinks.classList.contains('active')) {
                 dropdowns.forEach(dropdown => {
                     dropdown.classList.remove('active');
@@ -177,13 +176,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Close menu when clicking a link
+        
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
                 
-                // Close dropdowns
+                
                 dropdowns.forEach(dropdown => {
                     dropdown.classList.remove('active');
                 });
@@ -191,25 +190,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Handle window resize
+    
     window.addEventListener('resize', function() {
         const hamburger = document.querySelector('.hamburger');
         
         if (window.innerWidth > 768) {
-            // Remove hamburger if it exists
+            
             if (hamburger) {
                 hamburger.remove();
             }
-            // Ensure nav links are visible
+            
             navLinks.style.display = 'flex';
             navLinks.classList.remove('active');
             
-            // Close all dropdowns
+            
             dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
             });
         } else {
-            // Add hamburger if it doesn't exist
+            
             if (!hamburger && navLinks) {
                 const newHamburger = document.createElement('div');
                 newHamburger.className = 'hamburger';
@@ -221,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 navbar.insertBefore(newHamburger, navLinks);
                 navLinks.style.display = 'none';
                 
-                // Add click event to new hamburger
+                
                 newHamburger.addEventListener('click', function() {
                     this.classList.toggle('active');
                     navLinks.classList.toggle('active');
