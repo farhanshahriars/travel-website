@@ -86,7 +86,7 @@ a {
     margin-left: 35px;
     position: relative;
     display: flex;
-    align-items: center;  /* This ensures vertical alignment */
+    align-items: center;  
 }
 .nav-links a {
     font-weight: 500;
@@ -111,11 +111,11 @@ a {
     font-size: 0.95rem;
 }
 
-/* ==================== DROPDOWN MENU STYLES ==================== */
+
 .dropdown {
     position: relative;
     display: flex;
-    align-items: center;  /* Critical for alignment */
+    align-items: center;  
 }
 
 
@@ -123,7 +123,7 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 5px 0;  /* Match other nav link padding */
+    padding: 5px 0;  
 }
 
 .dropdown-toggle::after {
@@ -145,7 +145,7 @@ a {
 .dropdown-arrow {
     font-size: 0.8rem;
     transition: transform 0.3s ease;
-    margin-top: 1px;  /* Minor adjustment for perfect centering */
+    margin-top: 1px;  
 }
 
 .dropdown:hover .dropdown-arrow {
@@ -258,7 +258,7 @@ a {
     line-height: 1.4;
 }
 
-/* Active state for dropdown */
+
 .dropdown.active .dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -269,12 +269,12 @@ a {
     transform: rotate(180deg);
 }
 
-/* Mobile dropdown styles */
+
 @media (max-width: 768px) {
     .nav-links li {
-        margin: 0;  /* Remove left margin on mobile */
+        margin: 0;  
         width: 100%;
-        justify-content: flex-start;  /* Align to left on mobile */
+        justify-content: flex-start;  
     }
     
     .dropdown-toggle {
@@ -312,7 +312,7 @@ a {
     }
 }
 
-/* Ensure dropdown doesn't break header */
+
 .header {
     z-index: 1000;
 }
@@ -636,7 +636,7 @@ a {
     .next-btn { right: 15px; }
     .destinations, .services { padding: 70px 5%; }
     
-    /* Add hamburger menu for mobile */
+    
     .hamburger {
         display: block;
         cursor: pointer;
